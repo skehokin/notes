@@ -23,30 +23,34 @@
 	Here I teach-to-learn a variety of new and old Javascript ideas.
 </p>
 <article class="querySelector">
-<h3>querySelector</h3>
+<h3>document.querySelector</h3>
 <p>
 	When I first started learning Javascript, I was initially taught to access an HTML element like this:
 </p>
-<pre>document.getElementById("element");</pre>
+<pre>document.getElementById("element"); // "element" being the ID assigned to the HTML element</pre>
 <p>
-	(where element here is the ID assigned to the HTML element in question)
+
 </p>
 <p>
-	I found this a wonderfully persuasive argument for switching to always using jQuery and its rather simpler version:
+	Later, I learned that it was in fact possible to refer to elements by their class rather than ID:
+	<pre>document.getElementsByClassName("element");</pre>
+	 which was good because I had heard that IDs were undesirable somehow.
 </p>
-<pre>$("#element")</pre>
 <p>
- It appears that another, slightly less "clunky" version is also available in plain Javascript:
+	I found this extended syntax a wonderfully persuasive argument for switching to always using jQuery and its rather simpler version:
+</p>
+<pre>$("#element")</pre> and <pre>$(".element")</pre>
+<p>
+ As people began to focus on program speed, jQuery became a less valuable option, however. Happily, there is another, slightly less "clunky", version available in plain Javascript:
  <pre> document.querySelector("p.class")</pre>
 </p>
 
-<p> Now, ever since I started learning HTML at 15, it has seemed that web standards have advanced and changed for almost arbitrary reasons. It was easy for me to assume that this was the equivalent of using &lt;strong&gt; instead of &lt;b&gt; - functionally the same, though a result of a change in ideological approach.
+<p> Now, ever since I started learning HTML at 15, it has seemed that web standards have advanced and changed for almost arbitrary reasons. It was easy for me to assume that the new querySelector was the equivalent of using &lt;strong&gt; instead of &lt;b&gt; - the result of a change in ideological approach, and functionally the same.
 </p>
 <p>However, both getElementbyID and querySelector are "up to date" Javascript and do in fact vary more from one another than one might expect.</p>
 
-<p>
-The key difference, which is already evident,
-</p>
+<!-- add querySelectorAll and a comparison of the two-->
+
 </article>
 </main>
 <footer>
