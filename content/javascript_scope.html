@@ -20,6 +20,38 @@
 <p>Scope is an intermediate Javascript concept, detailing the area of code which is governed by certain variables and similar. Here it is further elucidated.</p>
 </header>
 
+<article>
+<h3>Lexical Scope</h3>
+<p>
+	This means the area of code where a variable can be refered to by name without getting access errors, basically the area where a variable name has meaning, has a specific variable assigned to it. This is divided into a number of different named scopes.
+</p>
+<h4>Global Scope</h4>
+<p>
+This is essentially the area outside any functions. A variable defined in the global scope can be accessed anywhere in the file, including within functions. In some JS programs, global scope is shared across files.
+</p>
+
+<h4>New Lexical Scopes</h4>
+<p>
+Any variable defined within a function can only be accessed from within that same function. A function's own variable name, being inside the global scope, can also be accessed within that function's scope.
+
+However, if you <strong> don't specifically define the variable using "var", </strong> the variable will actually be added to the <strong>global</strong> scope, rather than the function's.
+</p>
+
+<h4>Things That Don't Scope</h4>
+<p>
+Javascript doesn't have block scoping, which is to say, if statements, while statements, for loops etc, while they have curly braces, don't have their own lexical scope. Only functions have their own lexical scope.
+</p>
+
+</article>
+
+<article>
+	<h3>
+		Execution Contexts
+	</h3>
+	<p>Execution contexts, also called "in memory scopes" are memory structures which are built up by a program when it runs. Certain rules govern which variables the program has access to at different points in the execution. Note that these are not the same as in memory objects, however. You can never store an array full of contexts.</p>
+	<p>New execution contexts are created each time you run a function.</p>
+</article>
+
 <footer>
 <a href="../main.html">Return Home</a>
 </footer>
