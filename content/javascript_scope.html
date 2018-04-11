@@ -52,6 +52,30 @@ Javascript doesn't have block scoping, which is to say, if statements, while sta
 	<p>New execution contexts are created each time you run a function.</p>
 </article>
 
+
+<article>
+<h3>Closures</h3>
+
+<p>A closure is a function that remains available after its outer scopes have returned. It is not an intuitive name.</p>
+
+<p>Here are three example methods for accessing a function once external functions have returned:</p>
+
+<p>
+	Passing the function into setTimeout().
+</p>
+<p>
+	Returning the function from the outer scopes
+</p>
+<p>
+	Saving the function into a global variable
+</p>
+
+<p>Having done this, the function nevertheless needs to "appear" within the original execution context of its outer scopes to work - so any variable defined in an outer scope will stay the same each time the closure is run.</p>
+
+<p>The key use for this is refactoring code by taking any function that needs to repeat using the same inputs, and making it a closure, saving it with its input into a global array or object</p>
+
+</article>
+
 <footer>
 <a href="../main.html">Return Home</a>
 </footer>
