@@ -19,7 +19,35 @@
 <h2 class="summary-head"> Summary:</h2>
 <p>"this" is a keyword in JavaScript which refers to the object initiating a function.</p>
 </header>
+<article>
+<h3>An easy way to figure "this" out</h3>
 
+<p>
+	"this", when used as a keyword in a function, is bound to the object initiating that function. So, when you call <i>myObject.func</i>, "this" refers to the object before the dot.
+</p>
+
+<p>To explain:</p>
+
+<p>
+	When you call a function, often that function will be a property (or "method") of an object. (These can be either built into the datatype or added by an API, library or yourself).
+</p>
+<p>
+	For instance when you call:
+	<pre>document.getElementById("main-heading").setAttribute("class", "capslock");</pre>
+	setAttribute is a method of Elements, from which the "main-heading" HTML element inherits, and hence a method of "main-heading" itself.
+</p>
+<p>
+ 	So, that's a method.
+</p>
+<p>
+	In the above example, if the "this" keyword was used in the setAttribute() function, then what would "this" refer to?
+</p>
+<p>
+	Answer: "this" would refer to the HTML element with the id of "main-heading", because "this" refers back to the object that is initiating the function. Meaning, it refers to whatever is written before the dot:
+	<pre>document.getElementById("main-heading")</pre>
+</p>
+
+</article>
 
 </main>
 <footer>
