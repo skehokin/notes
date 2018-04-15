@@ -17,8 +17,32 @@
 <main class="summary">
 <header>
 <h2 class="summary-head"> Summary:</h2>
-<p>My current guess is that prototype chains occur when you pass methods from one datatype, such as strings, to another datatype. That's the main use of the term I have heard. I think there's some other weird behaviour that occurs before a datatype is given methods, but I don't understand that. </p>
+<p>Prototype chains occur when an object takes on all the properties of another object, often by looking up the property after looking in its own properties. This can be done repeatedly, making chains. </p>
 </header>
+<article>
+	<h3>
+		Object.create()
+	</h3>
+	<p>One way of copying an object is to use the below syntax:
+	<pre>var thingy = Object.create(other)</pre>
+where thingy is given a link to other.
+	</p>
+	<p>
+		This means that whenever a property is requested that thingy doesn't have, a lookup is performed, at that time, to see if other has that property. The program then acts as though thingy does in fact have that property, with the value given by other. This is different from a simple copy, because other can be changed and the lookup from thingy will reflect that change.
+	</p>
+	</article>
+	<article>
+	<h3>Prototypes</h3>
+	<p>
+		Interestingly, this is what JavaScript uses to make all objects "inherit" from the basic "prototype" object, giving all objects certain basic properties and methods.
+	</p>
+	<p>
+		The prototype object includes the the constructor property, which indicates what function was used to create a certain object. This is not the same as the prototype object, although people often confuse the two.
+	</p>
+	<p>
+		There are other, slightly less fundamental prototypes for different data structures, such as the Array Prototype and the String Prototype, which those data structures also delegate to. Those less fundamental prototypes themselves delegate to the Object Prototype.
+	</p>
+</article>
 
 </main>
 <footer>
