@@ -53,6 +53,25 @@
 <p>If the function is defined in the global scope and therefore outside of any function, then "this" is bound to the global object(!)</p>
 </article>
 
+<article>
+<h3>Being cautious with "this"</h3>
+<p>When you pass a function with "this" as a parameter into another function (such as a callback function), "this" can behave in unexpected ways. This is because even if you pass it in with dot notation, as a method, it may be run quite differently by the new function. It may be bound to the global object, or may even (theoretically) be a method for a different object. </p>
+
+<p> To prevent this from happening, you would want to call your this-containing-function inside another function. It is then the outer function which is passed to the call-back function. </p>
+</article>
+
+<article>
+	<h3>
+		The keyword "new"
+	</h3>
+	<p>
+		<pre>new r.method(g,b)</pre>
+		"this" is changed by the use of the keyword new. How?
+	</p>
+	<p>
+		In this case, "this" is bound to a new object, which is created automatically by the function. Presumably this syntax allows for OOP-like functions where instances of classes can be created.
+	</p>
+</article>
 </main>
 <footer>
 <a href="../main.html">Return Home</a>
